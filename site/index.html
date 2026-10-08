@@ -1,0 +1,32 @@
+<!doctype html><html lang="en" class="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="RepoScribe: local-first repository name, description and tag ideas. No account, AI key or uploads."><title>RepoScribe - a name to build on</title><link rel="stylesheet" href="style.css"></head><body><main><header><span class="brand">REPOSCRIBE <small>A SMALL START FOR BIG IDEAS</small></span><button id="theme" aria-label="Switch color theme"><!-- @license lucide-static v1.52.0 - ISC -->
+<svg class="icon"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+</button></header><section class="intro"><span class="badge">LOCAL-FIRST NAMING WORKSPACE</span><h1>A name to build on.</h1><p>Turn a project idea into names, descriptions and tags.<br>Rule-based suggestions. No account, API key or uploads.</p></section><section class="layout"><div class="frame"><form class="inner" id="form"><span class="eyebrow">01 / PROJECT BRIEF</span><h2>What are you building?</h2><label class="title" for="purpose">Project purpose</label><textarea id="purpose" required minlength="4" maxlength="240" placeholder="e.g. organize developer bookmarks">organize developer bookmarks</textarea><label class="title" for="tech">Technologies (optional)</label><input id="tech" type="text" maxlength="100" value="TypeScript, React" placeholder="e.g. TypeScript, React"><fieldset><legend>Project type</legend><div class="choices"><label><input type="radio" name="kind" value="web app" checked><span>Web app</span></label><label><input type="radio" name="kind" value="library"><span>Library</span></label><label><input type="radio" name="kind" value="CLI tool"><span>CLI tool</span></label><label><input type="radio" name="kind" value="browser extension"><span>Extension</span></label></div></fieldset><fieldset><legend>Naming direction</legend><div class="choices"><label><input type="radio" name="tone" value="clear" checked><span>Clear</span></label><label><input type="radio" name="tone" value="playful"><span>Playful</span></label><label><input type="radio" name="tone" value="technical"><span>Technical</span></label></div></fieldset><button class="primary" type="submit">Generate ideas <span class="arrow"><!-- @license lucide-static v1.52.0 - ISC -->
+<svg class="icon"
+  class="lucide lucide-arrow-up-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7h10v10" />
+  <path d="M7 17 17 7" />
+</svg>
+</span></button><div class="small-actions"><button type="button" id="sample">Try an example</button><button type="button" id="reset">Clear workspace</button></div></form></div><div><div class="result-head"><div><span class="eyebrow" id="count">0 DIRECTIONS</span><h2>Your next starting point</h2></div><div class="export-actions"><button id="copyall">Copy all</button><button id="export">Export JSON</button></div></div><div id="results"></div><div class="status" id="status" role="status" aria-live="polite">Write a brief, then generate. Names are ideas, not availability guarantees.</div></div></section><section class="bottom"><p>Everything runs in your browser. Only the theme is saved. AI generation, GitHub availability checks and automatic repo creation are future work, not features of this release.</p><a class="download" href="reposcribe-extension.zip" download>Download Chrome popup</a></section><div class="divider"></div><footer><span>Built by Dipan Nama. Check names and trademarks before use.</span><a href="https://github.com/DipanNama/RepoScribe" target="_blank" rel="noopener noreferrer">Source & installation</a></footer></main><script src="naming.js"></script><script src="app.js"></script></body></html>

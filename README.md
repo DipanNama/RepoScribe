@@ -1,94 +1,25 @@
-# RepoScribe - AI-Powered Repository and Project Name Generator 🚀
+# RepoScribe
 
-**RepoScribe** is a Chrome extension designed to assist developers in generating unique and meaningful project or repository names, complete with descriptions, using the power of AI. Whether you're brainstorming a new project or seeking a creative repository name, RepoScribe has you covered.
+A local-first naming workspace: describe a project, choose type/tone and get six repository-name directions, descriptions and tags. Copy names/all results, export JSON, clear and switch theme. Live browser demo and permission-free Chrome popup ZIP.
 
----
+## Honest first release
 
-## 🌟 Features
+This is rule-based, deterministic local generation, not AI. No account, API key, upload, availability/trademark check or automatic repository creation. The original AI vision is future work; names are starting points, not unique/available guarantees. Only theme is saved. User input renders as text, never HTML.
 
-- **AI-Powered Suggestions**: Generate creative, unique project/repository names tailored to your needs.  
-- **Custom Descriptions**: AI-generated descriptions based on your input to make your repositories stand out.  
-- **Interactive Questionnaire**: Answer a few simple questions about your project, and let the AI do the magic.  
-- **Future Enhancements**: Planned features include generating project banners, logos, and tags for enhanced customization.  
+## Development
 
----
+Node 22 and system zip: `npm test` (14 unit tests), `npm run build`. Serve `dist` with a static server. No npm installation needed. The workflow deploys dist only. Browser tests cover generation, tone, copy feedback, safe text rendering, invalid brief, JSON export, reset, persisted theme, mobile overflow and popup UI. Output is self-contained and works offline once loaded.
 
-## 📥 Installation
+## Chrome popup
 
-1. Clone the repository to your local machine:  
-   ```bash
-   git clone https://github.com/DipanNama/RepoScribe.git
-   ```
-2. Open Chrome and navigate to `chrome://extensions`.  
-3. Enable **Developer Mode** (toggle in the top right).  
-4. Click **Load unpacked** and select the cloned repository folder.  
+Download reposcribe-extension.zip from the live demo, unzip it, open chrome://extensions, enable Developer Mode, choose Load unpacked and select the extracted folder. No permissions, content scripts, host access, background worker or API keys. It is not published in the Chrome Web Store. The same external JS runs under Manifest V3 CSP; the popup is separately tested locally.
 
----
+## Release workflow
 
-## 🔧 How It Works
+Work on a typed branch, test/build locally and inspect desktop dark/mobile. One PR/squash to main triggers Production Pages once. Only main pushes build; no branch/PR/tag/manual trigger. Pages Source Actions and github-pages environment main-only before merge.
 
-1. Install the extension in your Chrome browser.  
-2. Click the **RepoScribe** icon to open the extension.  
-3. Fill out a short questionnaire about your project:  
-   - Project type (e.g., web app, library, tool).  
-   - Primary functionality or purpose.  
-   - Key technologies or frameworks used.  
-   - Any specific themes or ideas you want to incorporate.  
-4. Click "Generate" and get:  
-   - A list of unique repository name suggestions.  
-   - A detailed project description tailored to your input.  
-5. Copy the results or fine-tune them further to match your needs.  
+## Sources
 
----
+Buttons adapted from Pines: https://devdojo.com/pines/docs/button . Component discovery: https://shoogle.dev/ . Icons embedded locally from Lucide (ISC), see LICENSE-icons. No remote scripts/fonts/assets. Existing repository license was referenced but absent, so this release does not invent a project license grant.
 
-## 💡 Use Cases
-
-- Developers starting new projects and looking for creative repository names.  
-- Open-source contributors seeking unique branding for their repositories.  
-- Hackathon participants who need fast and appealing project descriptions.  
-
----
-
-## 🔮 Future Roadmap
-
-- [ ] AI-generated banners and logos for repositories.  
-- [ ] Keyword tags to enhance discoverability.  
-- [ ] Integration with GitHub to automatically create repositories with generated names and descriptions.  
-- [ ] Enhanced AI-driven suggestions based on trends and developer profiles.  
-
----
-
-## 🤖 Tech Stack
-
-- **Frontend**: HTML, CSS, JavaScript  
-- **Backend**: Node.js  
-- **AI Integration**: OpenAI GPT-4 API (or similar)  
-- **Browser API**: Chrome Extensions API  
-
----
-
-## 🛡️ License
-
-This project is licensed under the [MIT License](LICENSE).  
-
----
-
-## 🌐 Contributing
-
-We welcome contributions from the community! If you'd like to contribute:  
-
-1. Fork the repository.  
-2. Create a new branch for your feature/bug fix.  
-3. Submit a pull request with a detailed explanation of your changes.  
-
----
-
-## 📨 Contact
-
-Have questions or suggestions? Feel free to open an issue or reach out:  
-- **Email**: dipannama91@gmail.com  
-- **GitHub**: [DipanNama](https://github.com/DipanNama)
-
----
-
-Let **RepoScribe** take the hassle out of naming and branding your next project! 🚀
+Roadmap: AI generation through a securely configured backend, explicit GitHub availability checks, banners and optional repository creation with separate authorization.
