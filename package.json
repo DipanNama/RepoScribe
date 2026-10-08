@@ -1,0 +1,1 @@
+{"name":"reposcribe","version":"1.0.0","private":true,"scripts":{"test":"node --test naming.test.cjs","build":"node build.cjs"}}
